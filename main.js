@@ -54,6 +54,32 @@ console.log(todosMayores1000);
 // 10 .
 console.log(nombres.includes("Campera"));
 
+// Parte 4
+// 11 .
+console.log("Productos de menor a mayor");
+const productosOrdenados = [...productos].sort((a, b) => a.precio - b.precio);
+productosOrdenados.forEach(p => {
+  console.log(`Producto: ${p.nombre} - Precio: $${p.precio}`);
+});
+  
+// 12 .
+const mensajes = productos.map(p => 
+    `El producto ${p.nombre} cuesta $${p.precio} y pertenece a la categoría ${p.categoria}.`
+  );
+  console.log(mensajes);
+
+  // 13 .
+  const nuevosProductos = [
+    { id: 6, nombre: "Aros", precio: 3000, categoria: "Accesorios" },
+    { id: 7, nombre: "Botas", precio: 5000, categoria: "Calzado" }
+  ];
+  
+  const todosLosProductos = [...productos, ...nuevosProductos];
+  
+  todosLosProductos.forEach(p => {
+    console.log(`Producto: ${p.nombre} - Precio: $${p.precio} - Categoría: ${p.categoria}`);
+  });
+  
 
 
 
