@@ -8,6 +8,7 @@ const productos = [
     // Parte 1
 // 1.
 console.log(`productos[0].nombre`);
+
 // 2.
 for (const producto of productos) {
     console.log(`Producto: ${producto.nombre} - Precio: $${producto.precio}`);
@@ -16,4 +17,31 @@ for (const producto of productos) {
 productos.forEach(producto => {
     console.log(`Producto: ${producto.nombre} - Precio: $${producto.precio}`);
 });
+
+// Parte 2
+// 4.
+const nombres = productos.map(producto => producto.nombre);
+console.log(nombres);
+
+// 5.
+console.log("Productos de la categoría 'Ropa':");
+const productosRopa = productos.filter(producto => producto.categoria === "Ropa");
+productosRopa.forEach(producto => {
+    console.log(`- ${producto.nombre}: $${producto.precio}`);
+  });
+
+// 6.
+console.log("Productos con precio mayor a $3000:");
+const productosCaros = productos.filter(producto => producto.precio > 3000);
+productosCaros.forEach(producto => {
+    console.log(`- ${producto.nombre}: $${producto.precio}`);
+  });
+
+// 7.
+console.log("Producto Gorra");
+const gorra = productos.find(producto => producto.nombre === "Gorra");
+console.log(gorra);
+
+
+
 
